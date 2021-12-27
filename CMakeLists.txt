@@ -6,6 +6,8 @@ include(cmake/macro.cmake)
 
 include_directories(include)
 
-add_subdirectory(src)
-
 enable_testing()
+include_directories(${PROJECT_SOURCE_DIR}/external/Catch2/src)
+
+add_subdirectory(external)
+add_subdirectory(src)
